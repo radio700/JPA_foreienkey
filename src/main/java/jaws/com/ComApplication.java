@@ -1,0 +1,13 @@
+package jaws.com;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ComApplication {
+
+	public static void main(String[] args) {
+		//s
+		SpringApplication.run(ComApplication.class, args);
+	}
+}
