@@ -2,6 +2,8 @@ package jaws.com.Entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,6 +13,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "OWNER")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,6 +28,7 @@ public class Owner {
         this.lastname = lastname;
     }
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> cars;//소유자는 여러대의 차를 가지니까
 

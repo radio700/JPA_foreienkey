@@ -1,11 +1,8 @@
 package jaws.com.Entity.kt_spec;
 
 import jakarta.persistence.*;
-import jaws.com.Entity.kt_pbl_bom.kt_pbl_bom;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor
