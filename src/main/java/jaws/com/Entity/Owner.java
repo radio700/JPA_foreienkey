@@ -19,6 +19,12 @@ public class Owner {
     private String firstname;
     private String lastname;
 
+    public Owner(String firstname, String lastname) {
+        super();
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> cars;//소유자는 여러대의 차를 가지니까
 
