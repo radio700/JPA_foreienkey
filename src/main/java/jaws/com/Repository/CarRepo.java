@@ -4,9 +4,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import jaws.com.Entity.Car;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
 import java.util.List;
 
 
+//@RepositoryRestResource(path = "vehicles")//주소창 바꾸고 싶으면...
 public interface CarRepo extends CrudRepository<Car,Long>{
     List<Car> findByColor(String Color);
     List<Car> findByYear(int year);
